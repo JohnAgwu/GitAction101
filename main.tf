@@ -40,7 +40,7 @@ resource "aws_subnet" "public_subnet" {
   }
 }
 
-# Create an Internet Gateway
+# Created an Internet Gateway
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
   tags = {
