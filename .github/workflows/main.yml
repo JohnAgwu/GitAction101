@@ -1,5 +1,5 @@
-name: Techbleat Git Action
-run-name: Techbleat Git Action
+name: John Git Action
+run-name: John Git Action
 on: [push]
 
 env:
@@ -25,4 +25,8 @@ jobs:
        run: terraform plan
 
      - name: Terraform Apply
-       run: terraform destroy --auto-approve 
+       run: terraform apply --auto-approve
+
+    #  - name: Terraform Destroy
+    #    run: terraform destroy --auto-approve
+       
