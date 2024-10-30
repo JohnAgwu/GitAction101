@@ -43,7 +43,6 @@ jobs:
              ssh -i ~/.ssh/jonag.pem ec2-user@ec2-35-177-155-56.eu-west-2.compute.amazonaws.com "echo 'Connected to EC2 instance'"
 
     
-
     #  - name: Terraform Destroy
     #    run: terraform destroy --auto-approve
        
