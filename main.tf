@@ -21,8 +21,8 @@ terraform {
 }
 
 resource "aws_vpc" "main" {
-  cidr_block = "192.168.0.0/16"
-  enable_dns_support = true
+  cidr_block           = "192.168.0.0/16"
+  enable_dns_support   = true
   enable_dns_hostnames = true
   tags = {
     Name = "main-vpc"
@@ -30,9 +30,9 @@ resource "aws_vpc" "main" {
 }
 
 resource "aws_subnet" "public_subnet" {
-  vpc_id            = aws_vpc.main.id
-  cidr_block        = "192.168.1.0/24"
-  availability_zone = "eu-west-2a"
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = "192.168.1.0/24"
+  availability_zone       = "eu-west-2a"
   map_public_ip_on_launch = true
 
   tags = {
