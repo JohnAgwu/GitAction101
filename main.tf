@@ -10,3 +10,11 @@ resource "aws_instance" "ec-create" {
   }
 
 }
+
+terraform {
+  backend "s3" {
+    bucket = "jonag-terraform-store"
+    key    = "cicd-project/terraform.tfstate"
+    region = "eu-west-2"
+  }
+}
