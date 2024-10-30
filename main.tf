@@ -5,6 +5,7 @@ resource "aws_instance" "ec-create" {
   ami           = "ami-0b4c7755cdf0d9219"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public_subnet.id
+  key_name      = "jonag"
 
   tags = {
     Name = "Node-Created-By-GitAction"
